@@ -59,13 +59,23 @@
 
       html += '<ul class="pagination">';
 
+      // 是否组装第一页
+
       // 组装上一页
       if (defaultConfig.pageNow !== 1) {
         html += '<li><a href="#page=prev">' + defaultConfig.pagePrev + '</a></li>'
       }
 
+
       // 组装中间的页码
-      pageNowTemp = defaultConfig.pageNow - (defaultConfig.pageLength / 2) | 0;
+      pageNowTemp =  defaultConfig.pageNow - ((defaultConfig.pageLength / 2) | 0);
+
+      // 组装最前一页
+      if( pageNowTemp === 2 ){
+        html += '<li><a href="#page=1">1</a></li>';
+      } else if( pageNowTemp > 2 ) {
+        html += '<li><a href="#page=1">1..</a></li>';
+      }
 
       // 缓存页码长度
       pageLengthTemp = defaultConfig.pageLength;
@@ -89,6 +99,13 @@
         pageNowTemp++;
         // 页码计数器减
         pageLengthTemp--;
+      }
+
+      // 组装最后一页
+      if( pageNowTemp === defaultConfig.lastPage ){
+        html += '<li><a href="#page='+defaultConfig.lastPage+'">'+defaultConfig.lastPage+'</a></li>';
+      } else if( pageNowTemp < defaultConfig.lastPage ) {
+        html += '<li><a href="#page='+defaultConfig.lastPage+'">..'+defaultConfig.lastPage+'</a></li>';
       }
 
       // 组装下一页

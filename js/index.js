@@ -72,6 +72,7 @@ $(window).on('getData', function() {
 var pageConfig = {
   prePageLenght: 10,
   dataLength: 0,
+  pageLength: 6,
   // pageNow: 1
 };
 
