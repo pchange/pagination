@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<!-- <html manifest="qing-app.appcache"> -->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>分页功能</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="分页">
+    <meta name="keywords" content="分页,前后端分离">
+    <meta name="author" content="shenqihui">
+    <meta name="version" content="1.0.0">
+    <link rel="stylesheet" href="//cdn.staticfile.org/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <div class="list-box">
+            <div class="loading"></div>
+          </div>
+          <!-- 分页的 -->
+          <div class="clearfix pagination-box t-a-r"></div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="//cdn.staticfile.org/zepto/1.0rc1/zepto.min.js"></script>
+    <script type="text/javascript" src="//aui.github.io/artTemplate/dist/template.js"></script>
+    <script type="text/javascript" src="./js/pagination.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+
+    <script type="text/html" id="list-box">
+          <div class="list-group">
+            {{each datas as value i}}
+            <a href="#" class="list-group-item">
+              <h4 class="list-group-item-heading">{{value.title}}</h4>
+              <p class="list-group-item-text">{{value.content}}</p>
+            </a>
+            {{/each}}
+          </div>
+    </script>
+    
+    <!-- 谷歌统计 -->
+    <script>
+      // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      // ga('create', 'UA-52696181-1', 'auto');
+      // ga('send', 'pageview');
+    </script>
+  </body>
+</html>
