@@ -72,9 +72,8 @@ $(window).on('getData', function() {
 var pageConfig = {
   prePageLenght: 10,
   dataLength: 0,
-  pageNow: 1
+  // pageNow: 1
 };
-var pageConfigNew = {};
 
 
 /**

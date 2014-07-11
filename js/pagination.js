@@ -144,7 +144,7 @@
   // })
   // $(window).trigger("pageBuilder");
   // 绑定到 $
+  pageBuilder.page = defaultConfig;
   window.pageBuilder = pageBuilder;
-  window.pageBuilder.page = defaultConfig;
 })(window);
 
