@@ -1,0 +1,20 @@
+body{
+  padding-top: 2em; 
+}
+.loading{
+  height: 13px;
+  background: url(../img/loading.gif) center center no-repeat;
+  margin: 1em;
+}
+
+.t-a-r{
+  text-align: right;
+}
+
+a[href^="http://tongji.baidu.com"] {
+  position: absolute;
+  display: block;
+  z-index: -999;
+  left: -100000px;
+  top: -111111px;
+}
