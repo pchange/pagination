@@ -3,6 +3,7 @@
 适合前后端分离的页码生成器。
 
 ##  目录
+* [demo](#demo)
 * [快速上手](#快速上手)
 * [特性](#特性)
 * [方法](#方法)
@@ -10,6 +11,8 @@
 * [html结构](#html结构)
 * [版本说明](#版本说明)
 
+## demo
+直接访问 [http://shenqihui.github.io/pagination](http://shenqihui.github.io/pagination)
 
 ## 快速上手
 
