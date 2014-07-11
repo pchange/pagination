@@ -1,0 +1,28 @@
+{
+  "name": "pagination",
+  "version": "1.0.0",
+  "description": "适合前后端分离的页码生成器。",
+  "main": "''",
+  "scripts": {
+    "test": "''"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shenqihui/pagination.git"
+  },
+  "keywords": [
+    "pagination",
+    "前后端分离"
+  ],
+  "author": "ingbaobei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shenqihui/pagination/issues"
+  },
+  "homepage": "https://github.com/shenqihui/pagination",
+  "devDependencies": {
+    "grunt": "0.4.2",
+    "grunt-contrib-concat": "0.4.0",
+    "grunt-contrib-uglify": "0.3.2"
+  }
+}

@@ -6,6 +6,8 @@
 * [快速上手](#快速上手)
 * [特性](#特性)
 * [方法](#方法)
+* [库依赖](#库依赖)
+* [html结构](#html结构)
 * [版本说明](#版本说明)
 
 
@@ -104,7 +106,27 @@ var defaultConfig = {
 pageBuilder.page = defaultConfig;
 ```
 
+## 库依赖
 
+### js 库依赖
+暂时支持 jquery 或者 zepto 之类的，用于 js 赋值操作，依赖这些库的 元素选择、事件方法、html操作方法（例如 ```$('body')```，```$(window).on('event',function(){})```，```$(window).trigger("event")```，```$('body').html("something")```）。
+
+### css 库依赖
+可以不进行 css 库的引入，分页代码的 html 结构和 bootstarp 的分页 html 结构基本一致。下面将提到 html 结构。想使用的话直接引用 bootstrap 的 css 库即可。当然可以选择单独引用， ```css/pagination.css``` 这个是直接从 bootstrap 里面单独抽出来的编译后的分页 css 代码，可直接引用。
+
+## html结构
+当前页码为 2 的时候。
+```html
+<ul class="pagination">
+  <li><a href="#page=prev">上一页</a></li>
+  <li><a href="#page=1">1</a></li>
+  <li class="active"><a href="#page=2">2</a></li>
+  <li><a href="#page=3">3</a></li>
+  <li><a href="#page=4">4</a></li>
+  <li><a href="#page=next">下一页</a></li>
+</ul>
+```
+就是这么多，没有进行动作的绑定，只把分页事件绑定到了 window 下面的 hashchange 事件中，因此 a 标签的 href 能间接触发分页事件。这也是为什么一个页面只能使用一个分页实例的问题所在。
 
 ## 版本说明
 
