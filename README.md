@@ -16,7 +16,7 @@
 引入库，
 ```html
 <script type="text/javascript" src="//cdn.staticfile.org/zepto/1.0rc1/zepto.min.js"></script>
-<script type="text/javascript" src="./js/pagination.js"></script>
+<script type="text/javascript" src="./js/pagination.min.js"></script>
 ```
 
 html结构
@@ -57,7 +57,7 @@ pageBuilder(pageConfig);
 
 
 ##  特性
-* 代码量少，方便改造
+* 代码量少，方便改造，v1.0.0版本的 js 文件压缩之后 2K 不到的大小，css压缩就直接使用 koala 进行了，min.css，也不到 2K。
 * 接口方便，方便回调
 * 方便监控换页事件
 * 高度定制
